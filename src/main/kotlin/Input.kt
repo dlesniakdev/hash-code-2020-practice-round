@@ -4,6 +4,7 @@ data class Input(
     val types: List<Long>
 ) {
     override fun toString(): String {
-        return "Input(maxSlices=$maxSlices, differentTypes=$differentTypes, types.size=${types.size})"
+        return "Input(maxSlices=$maxSlices, differentTypes=$differentTypes, types.size=${types.size}, " +
+                "types=${types.take(10)})"
     }
 }
