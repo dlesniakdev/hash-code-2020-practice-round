@@ -22,15 +22,7 @@ fun parseInputFile(fileName: String): Input {
 }
 
 fun compute(input: Input): Output {
-    var currentSlices: Long = 0
-    val tempList = arrayListOf<Int>()
-    input.types.reversed().forEachIndexed { i, it ->
-        if (currentSlices + it <= input.maxSlices) {
-            currentSlices += it
-            tempList.add(input.types.size - i - 1)
-        }
-    }
-    return Output(currentSlices, tempList.size.toLong(), tempList.sorted())
+    return Output(1L, 1L, emptyList())
 }
 
 fun createOutputFile(fileName: String, output: Output) {
